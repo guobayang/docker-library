@@ -1,2 +1,2 @@
-FROM sonatype/nexus3:3.13.0
+FROM sonatype/nexus3:3.14.0
 MAINTAINER yangsj <yangsj@wanfangdata.com.cn>
