@@ -11,7 +11,7 @@ ENV LD_PRELOAD /usr/lib64/libgomp.so.1:/opt/intel/mkl/lib/intel64/libmkl_def.so:
 /opt/intel/mkl/lib/intel64/libmkl_intel_lp64.so:/opt/intel/mkl/lib/intel64/libmkl_gnu_thread.so
 
 #Install necessary build tools
-RUN yum install -y gcc-c++ make swig3 git
+RUN yum install -y gcc-c++ make swig3 git unzip curl  tar
 #Install necesary headers/libs
 RUN yum install -y python-devel numpy
 RUN git clone https://github.com/Microsoft/vcpkg.git && cd vcpkg && ./bootstrap-vcpkg.sh && ./vcpkg integrate install
