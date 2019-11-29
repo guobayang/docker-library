@@ -11,7 +11,8 @@ ENV LD_PRELOAD /opt/intel/mkl/lib/intel64/libmkl_def.so:\
 /opt/intel/mkl/lib/intel64/libmkl_intel_lp64.so:/opt/intel/mkl/lib/intel64/libmkl_gnu_thread.so
 
 #Install necessary build tools
-RUN yum install -y g++-7 gcc-c++ make swig3 git unzip curl  tar
+RUN yum install -y devtoolset-8-toolchain  make swig3 git unzip curl  tar
+RUN scl enable devtoolset-8 bash
 #Install necesary headers/libs
 RUN yum install -y python-devel numpy
 RUN git clone https://github.com/Microsoft/vcpkg.git
