@@ -14,7 +14,10 @@ ENV LD_PRELOAD /usr/lib64/libgomp.so.1:/opt/intel/mkl/lib/intel64/libmkl_def.so:
 RUN yum install -y gcc-c++ make swig3 git unzip curl  tar
 #Install necesary headers/libs
 RUN yum install -y python-devel numpy
-RUN git clone https://github.com/Microsoft/vcpkg.git && cd vcpkg && ./bootstrap-vcpkg.sh && ./vcpkg integrate install
+RUN git clone https://github.com/Microsoft/vcpkg.git
+RUN cd vcpkg 
+RUN ./bootstrap-vcpkg.sh
+RUN ./vcpkg integrate install
 # install gRPC using vcpkg package manager
 RUN vcpkg install grpc
 
