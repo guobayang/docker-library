@@ -1,4 +1,4 @@
-FROM docker.wanfangdata.com.cn:8443/centos:centos7
+FROM centos:centos7
 
 #Install MKL
 RUN yum-config-manager --add-repo https://yum.repos.intel.com/mkl/setup/intel-mkl.repo
