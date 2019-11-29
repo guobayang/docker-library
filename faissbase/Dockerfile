@@ -15,10 +15,9 @@ RUN yum install -y gcc-c++ make swig3 git unzip curl  tar
 #Install necesary headers/libs
 RUN yum install -y python-devel numpy
 RUN git clone https://github.com/Microsoft/vcpkg.git
-RUN cd vcpkg 
+WORKDIR vcpkg
 RUN ./bootstrap-vcpkg.sh
 RUN ./vcpkg integrate install
-# install gRPC using vcpkg package manager
 RUN vcpkg install grpc
 
 
