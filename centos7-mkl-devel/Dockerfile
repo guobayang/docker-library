@@ -9,3 +9,6 @@ ENV LIBRARY_PATH /opt/intel/mkl/lib/intel64:$LIBRARY_PATH
 ENV LD_PRELOAD /opt/intel/mkl/lib/intel64/libmkl_def.so:\
 /opt/intel/mkl/lib/intel64/libmkl_avx2.so:/opt/intel/mkl/lib/intel64/libmkl_core.so:\
 /opt/intel/mkl/lib/intel64/libmkl_intel_lp64.so:/opt/intel/mkl/lib/intel64/libmkl_gnu_thread.so
+# Install necessary build tools
+RUN yum install -y gcc-c++ make swig4
+
