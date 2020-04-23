@@ -1,0 +1,2 @@
+FROM pingcap/alpine-glibc
+RUN yum install -y lapack lapack-devel
